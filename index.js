@@ -12,6 +12,7 @@ let body = document.querySelector("body");
 let greenh1 = document.querySelector(".green-h1");
 let info = document.querySelector(".info"); //info about copy pswd
 let clicks = 0; //amount of click on button
+
 //generates random combinations of characters
 function pswdGenerator() {
   let randompswd = "";
@@ -20,11 +21,15 @@ function pswdGenerator() {
     randompswd += characters[randomindex];
   }
   pswdEl.textContent = randompswd;
-  //info label to copy a password
-  info.textContent = "Click to copy";
+  info.textContent = "Click to copy"; //info label to copy a password
+}
+//copies password to clipboard
+function copyPswd() {
+  pswdEl.textContent = "";
+  info.textContent = "Copied!!";
+  navigator.clipboard.writeText(pswdEl.textContent);
 }
 
-//if clicks is even dark-mode else light-mode
 function lightTheme() {
   container.style.background = "#0c3042";
   h1.style.color = "whitesmoke";
@@ -42,17 +47,12 @@ function darkTheme() {
   body.style.backgroundColor = "#999";
   greenh1.style.color = "#00c264";
 }
+//if clicks count are even dark-Theme else light-Theme
 function themeMode() {
   clicks += 1;
-  if (click % 2 == 0) {
+  if (clicks % 2 == 0) {
     lightTheme();
   } else {
     darkTheme();
   }
-}
-
-function copyPswd() {
-  pswdEl.textContent = "";
-  info.textContent = "Copied!!";
-  navigator.clipboard.writeText(pswdEl.textContent);
 }

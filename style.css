@@ -23,7 +23,7 @@ body {
   border-bottom: 3px solid #294452;
 }
 h1 {
-  transition: color 2s;
+  transition: color 1s;
   color: whitesmoke;
   font-weight: bold;
   font-size: 32px;
@@ -76,23 +76,32 @@ h1 {
   color: whitesmoke;
   font-weight: bold;
   margin-top: 20px;
+  cursor: pointer;
 }
 .material-symbols-outlined {
   height: 30px;
-  text-align: end;
+  text-align: center;
+  align-self: self-end;
   margin: 10px 20px;
-  color: rgb(218, 252, 245);
+  color: rgb(168, 245, 230);
   cursor: pointer;
   transition: color 2s;
   transition: text-shadow 1s;
+  width: 30px;
 }
 .material-symbols-outlined:hover {
   transition: text-shadow 1s;
-  transition: color 2s;
+  transition: color 1s;
   text-shadow: 0 0 10px #23e587;
 }
+.material-symbols-outlined:active {
+  transform: rotatez(180deg);
+  transition: 0.5s;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
 .info {
   margin-top: 10px;
   color: #2b4e5f;
-  cursor: pointer;
+  cursor: text;
 }
