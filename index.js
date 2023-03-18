@@ -1,98 +1,18 @@
-const characters = [
-  "A",
-  "B",
-  "C",
-  "D",
-  "E",
-  "F",
-  "G",
-  "H",
-  "I",
-  "J",
-  "K",
-  "L",
-  "M",
-  "N",
-  "O",
-  "P",
-  "Q",
-  "R",
-  "S",
-  "T",
-  "U",
-  "V",
-  "W",
-  "X",
-  "Y",
-  "Z",
-  "a",
-  "b",
-  "c",
-  "d",
-  "e",
-  "f",
-  "g",
-  "h",
-  "i",
-  "j",
-  "k",
-  "l",
-  "m",
-  "n",
-  "o",
-  "p",
-  "q",
-  "r",
-  "s",
-  "t",
-  "u",
-  "v",
-  "w",
-  "x",
-  "y",
-  "z",
-  "0",
-  "1",
-  "2",
-  "3",
-  "4",
-  "5",
-  "6",
-  "7",
-  "8",
-  "9",
-  "~",
-  "`",
-  "!",
-  "@",
-  "#",
-  "$",
-  "%",
-  "^",
-  "&",
-  "*",
-  "(",
-  ")",
-  "_",
-  "-",
-  "+",
-  "=",
-  "{",
-  "[",
-  "}",
-  "]",
-  ",",
-  "|",
-  ":",
-  ";",
-  "<",
-  ">",
-  ".",
-  "?",
-  "/",
-];
+// prettier-ignore
+const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9","~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?",
+"/"];
+
 let pswdEl = document.getElementById("pswd-el");
 let randomindex;
+let container = document.querySelector(".container");
+let h1 = document.querySelector("h1");
+let moto = document.querySelector(".moto");
+let themeIcon = document.querySelector(".material-symbols-outlined");
+let body = document.querySelector("body");
+let greenh1 = document.querySelector(".green-h1");
+let info = document.querySelector(".info"); //info about copy pswd
+let clicks = 0; //amount of click on button
+//generates random combinations of characters
 function pswdGenerator() {
   let randompswd = "";
   for (let i = 0; i < 10; i++) {
@@ -100,38 +20,39 @@ function pswdGenerator() {
     randompswd += characters[randomindex];
   }
   pswdEl.textContent = randompswd;
+  //info label to copy a password
   info.textContent = "Click to copy";
 }
 
-let container = document.querySelector(".container");
-let h1 = document.querySelector("h1");
-let moto = document.querySelector(".moto");
-let themeIcon = document.querySelector(".material-symbols-outlined");
-let body = document.querySelector("body");
-let greenh1 = document.querySelector(".green-h1");
-click = 0;
+//if clicks is even dark-mode else light-mode
+function lightTheme() {
+  container.style.background = "#0c3042";
+  h1.style.color = "whitesmoke";
+  moto.style.color = "whitesmoke";
+  themeIcon.textContent = "mode_night";
+  themeIcon.style.color = "whitesmoke";
+  body.style.backgroundColor = "#1a1a1a";
+}
+function darkTheme() {
+  container.style.background = "#dbebd8";
+  h1.style.color = "#0c3042";
+  moto.style.color = "#0c3042";
+  themeIcon.textContent = "sunny";
+  themeIcon.style.color = "#0c3042";
+  body.style.backgroundColor = "#999";
+  greenh1.style.color = "#00c264";
+}
 function themeMode() {
-  click += 1;
+  clicks += 1;
   if (click % 2 == 0) {
-    container.style.background = "#0c3042";
-    h1.style.color = "whitesmoke";
-    moto.style.color = "whitesmoke";
-    themeIcon.textContent = "mode_night";
-    themeIcon.style.color = "whitesmoke";
-    body.style.backgroundColor = "#1a1a1a";
+    lightTheme();
   } else {
-    container.style.background = "#dbebd8";
-    h1.style.color = "#0c3042";
-    moto.style.color = "#0c3042";
-    themeIcon.textContent = "sunny";
-    themeIcon.style.color = "#0c3042";
-    body.style.backgroundColor = "#999";
-    greenh1.style.color = "#00c264";
+    darkTheme();
   }
 }
-let info = document.querySelector(".info");
+
 function copyPswd() {
   pswdEl.textContent = "";
-  navigator.clipboard.writeText(pswdEl.textContent);
   info.textContent = "Copied!!";
+  navigator.clipboard.writeText(pswdEl.textContent);
 }
