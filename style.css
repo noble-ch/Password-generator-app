@@ -5,6 +5,7 @@ body {
   align-items: center;
   height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 1s;
 }
 .container {
   width: 50%;
@@ -12,23 +13,31 @@ body {
   max-width: 500px;
   display: flex;
   flex-direction: column;
-  background-color: #0c3042;
+  background: #0c3042;
   border-radius: 5px;
   box-shadow: 0 0 10px #0c3042;
+  transition: background-color 1s;
 }
 .upper-section {
   margin: 60px 40px 0px 40px;
   border-bottom: 3px solid #294452;
 }
 h1 {
+  transition: color 1s;
   color: whitesmoke;
+  font-weight: bold;
+  font-size: 32px;
 }
 .green-h1 {
-  color: #31f295;
+  color: #0eb162;
+  text-shadow: 0 0 1px #e5d523a1;
 }
 .moto {
+  transition: color 1s;
   color: whitesmoke;
+  font-weight: bold;
 }
+
 #generate-btn {
   background: #26b771;
   border: none;
@@ -42,7 +51,6 @@ h1 {
 }
 #generate-btn:hover {
   box-shadow: 0px -2px 20px #31f2953b;
-  border: 1px solid #0c3042;
 }
 #generate-btn:active {
   box-shadow: 0px -2px 20px #31f2953b;
@@ -66,4 +74,16 @@ h1 {
   cursor: pointer;
   color: whitesmoke;
   font-weight: bold;
+}
+.material-symbols-outlined {
+  height: 30px;
+  text-align: end;
+  margin: 10px 20px;
+  color: rgb(218, 252, 245);
+  cursor: pointer;
+  transition: text-shadow 1s;
+}
+.material-symbols-outlined:hover {
+  transition: text-shadow 1s;
+  text-shadow: 0 0 10px #23e587;
 }
