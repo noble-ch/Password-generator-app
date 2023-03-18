@@ -100,6 +100,7 @@ function pswdGenerator() {
     randompswd += characters[randomindex];
   }
   pswdEl.textContent = randompswd;
+  info.textContent = "Click to copy";
 }
 
 let container = document.querySelector(".container");
@@ -115,7 +116,7 @@ function themeMode() {
     container.style.background = "#0c3042";
     h1.style.color = "whitesmoke";
     moto.style.color = "whitesmoke";
-    themeIcon.textContent = "dark_mode";
+    themeIcon.textContent = "mode_night";
     themeIcon.style.color = "whitesmoke";
     body.style.backgroundColor = "#1a1a1a";
   } else {
@@ -127,4 +128,10 @@ function themeMode() {
     body.style.backgroundColor = "#999";
     greenh1.style.color = "#00c264";
   }
+}
+let info = document.querySelector(".info");
+function copyPswd() {
+  pswdEl.textContent = "";
+  navigator.clipboard.writeText(pswdEl.textContent);
+  info.textContent = "Copied!!";
 }

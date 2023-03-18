@@ -16,14 +16,14 @@ body {
   background: #0c3042;
   border-radius: 5px;
   box-shadow: 0 0 10px #0c3042;
-  transition: background-color 1s;
+  transition: background-color 2s;
 }
 .upper-section {
   margin: 60px 40px 0px 40px;
   border-bottom: 3px solid #294452;
 }
 h1 {
-  transition: color 1s;
+  transition: color 2s;
   color: whitesmoke;
   font-weight: bold;
   font-size: 32px;
@@ -33,7 +33,7 @@ h1 {
   text-shadow: 0 0 1px #e5d523a1;
 }
 .moto {
-  transition: color 1s;
+  transition: color 2s;
   color: whitesmoke;
   font-weight: bold;
 }
@@ -58,6 +58,7 @@ h1 {
 }
 .lower-section {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100px;
@@ -74,6 +75,7 @@ h1 {
   cursor: pointer;
   color: whitesmoke;
   font-weight: bold;
+  margin-top: 20px;
 }
 .material-symbols-outlined {
   height: 30px;
@@ -81,9 +83,16 @@ h1 {
   margin: 10px 20px;
   color: rgb(218, 252, 245);
   cursor: pointer;
+  transition: color 2s;
   transition: text-shadow 1s;
 }
 .material-symbols-outlined:hover {
   transition: text-shadow 1s;
+  transition: color 2s;
   text-shadow: 0 0 10px #23e587;
+}
+.info {
+  margin-top: 10px;
+  color: #2b4e5f;
+  cursor: pointer;
 }
