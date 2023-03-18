@@ -52,6 +52,7 @@ function darkTheme() {
   greenh1.style.color = "#00c264";
 }
 //if clicks count are even dark-Theme else light-Theme
+themeIcon.addEventListener("click", themeMode);
 function themeMode() {
   clicks += 1;
   if (clicks % 2 == 0) {
