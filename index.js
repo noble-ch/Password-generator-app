@@ -26,9 +26,9 @@ function pswdGenerator() {
 }
 //copies password to clipboard
 function copyPswd() {
-  pswdEl.textContent = "";
   info.textContent = "Copied!!";
   navigator.clipboard.writeText(pswdEl.textContent);
+  pswdEl.textContent = "";
 }
 
 function lightTheme() {

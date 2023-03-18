@@ -73,7 +73,7 @@ h1 {
   height: 100px;
   margin: 20px 40px 50px 40px;
 }
-.pswd-el {
+.pswd-container {
   background-color: #294452;
   height: 60px;
   width: 300px;
@@ -86,6 +86,9 @@ h1 {
   font-weight: bold;
   margin-top: 20px;
   cursor: pointer;
+}
+#pswd-el {
+  height: 20px;
 }
 .material-symbols-outlined {
   height: 30px;
@@ -100,11 +103,6 @@ h1 {
   transition: color 1s;
   text-shadow: 0 0 10px #23e587;
 }
-/* .material-symbols-outlined:active {
-  transform: rotatez(180deg);
-  transition: 0.5s;
-  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-} */
 
 .info {
   margin-top: 10px;
