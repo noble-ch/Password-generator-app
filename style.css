@@ -82,13 +82,16 @@ h1 {
   align-items: center;
   border-radius: 5px;
   cursor: pointer;
-  color: whitesmoke;
+  color: #23e587;
   font-weight: bold;
   margin-top: 20px;
-  cursor: pointer;
+  cursor: context-menu;
 }
+
 #pswd-el {
   height: 20px;
+  font-size: 20px;
+  cursor: url("images/copy-icon.png"), pointer;
 }
 .material-symbols-outlined {
   height: 30px;
@@ -106,6 +109,6 @@ h1 {
 
 .info {
   margin-top: 10px;
-  color: #2b4e5f;
+  color: #386f8a;
   cursor: text;
 }
