@@ -1,5 +1,7 @@
 // prettier-ignore
-const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9","~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?",
+const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+// prettier-ignore
+const specialCharacters = ["~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?",
 "/"];
 
 let pswdEl = document.getElementById("pswd-el");
@@ -11,8 +13,7 @@ let themeIcon = document.querySelector(".material-symbols-outlined");
 let body = document.querySelector("body");
 let greenh1 = document.querySelector(".green-h1");
 let info = document.querySelector(".info"); //info about copy pswd
-let clicks = 0; //amount of click on button
-
+let clicks = 0; //amount of clicked on button
 //generates random combinations of characters
 function pswdGenerator() {
   let randompswd = "";
@@ -36,14 +37,17 @@ function lightTheme() {
   moto.style.color = "whitesmoke";
   themeIcon.textContent = "mode_night";
   themeIcon.style.color = "whitesmoke";
+  themeIcon.style.transform = "rotatez(0deg)";
   body.style.backgroundColor = "#1a1a1a";
 }
 function darkTheme() {
   container.style.background = "#dbebd8";
   h1.style.color = "#0c3042";
   moto.style.color = "#0c3042";
+  themeIcon.style.transition = "1s";
   themeIcon.textContent = "sunny";
   themeIcon.style.color = "#0c3042";
+  themeIcon.style.transform = "rotatez(180deg)";
   body.style.backgroundColor = "#999";
   greenh1.style.color = "#00c264";
 }

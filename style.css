@@ -8,66 +8,75 @@ body {
   transition: background-color 1s;
 }
 .container {
-  width: 50%;
-  height: 50%;
-  max-width: 500px;
+  width: 600px;
+  height: 650px;
+  /* max-width: 500px; */
   display: flex;
   flex-direction: column;
   background: #0c3042;
   border-radius: 5px;
   box-shadow: 0 0 10px #0c3042;
-  transition: background-color 2s;
+  transition: background-color 1s;
 }
 .upper-section {
-  margin: 60px 40px 0px 40px;
+  margin: 30px 40px 0px 40px;
   border-bottom: 3px solid #294452;
 }
 h1 {
   transition: color 1s;
   color: whitesmoke;
   font-weight: bold;
-  font-size: 32px;
+  font-size: 45px;
 }
 .green-h1 {
   color: #0eb162;
   text-shadow: 0 0 1px #e5d523a1;
+  font-size: 40px;
 }
 .moto {
-  transition: color 2s;
+  transition: color 1s;
   color: whitesmoke;
   font-weight: bold;
+  font-size: 20px;
 }
 
 #generate-btn {
   background: #26b771;
   border: none;
   margin: 40px 20px 30px 0px;
-  padding: 8px 8px;
+  padding: 12px 12px;
   color: white;
   font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
   font-family: inherit;
+  font-size: 16px;
 }
 #generate-btn:hover {
   box-shadow: 0px -2px 20px #31f2953b;
 }
 #generate-btn:active {
-  box-shadow: 0px -2px 20px #31f2953b;
+  box-shadow: 0px -2px 20px #10e67f4e;
   background-color: #23e587;
 }
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .lower-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100px;
-  margin: 0px 40px 50px 40px;
+  margin: 20px 40px 50px 40px;
 }
 .pswd-el {
   background-color: #294452;
-  height: 30px;
-  width: 200px;
+  height: 60px;
+  width: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -80,25 +89,22 @@ h1 {
 }
 .material-symbols-outlined {
   height: 30px;
-  text-align: center;
-  align-self: self-end;
+  text-align: end;
   margin: 10px 20px;
   color: rgb(168, 245, 230);
   cursor: pointer;
-  transition: color 2s;
-  transition: text-shadow 1s;
-  width: 30px;
+  transition: 1s;
 }
 .material-symbols-outlined:hover {
   transition: text-shadow 1s;
   transition: color 1s;
   text-shadow: 0 0 10px #23e587;
 }
-.material-symbols-outlined:active {
+/* .material-symbols-outlined:active {
   transform: rotatez(180deg);
   transition: 0.5s;
   animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-}
+} */
 
 .info {
   margin-top: 10px;
